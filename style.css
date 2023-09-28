@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    padding-top: 1rem;
+    gap: 1rem;
+    min-height: 1100px;
+}
+
+.logo-sablon{
+    width: 5rem;
+    align-items: left;
+}
+
+
+ul {
+    width: 80%;
+    max-width: 30rem;
+
+}
+ul li{
+    list-style: none;
+}
+
+ul li:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.sosmed a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+}
+
+
+.my-photo{
+    width: 35rem;
+    padding:0;
+    text-shadow: 10px 10px 70px rgb(120, 120, 120);
+}
+
+.background-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-link h1{
+    display: flex;
+    color: #084366;
+    font-size: 3rem;
+    margin: 0.5rem;
+    
+}
+
+.background-link h2{
+    display: flex;
+    color: #084366;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+}
+
+.background-link p{
+    display: flex;
+    color: #084366;
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+
+
+.link-card{
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    padding: 1rem;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 8px 8px 0 #084366;
+}
+
+.link-card:hover{
+    border: 4px solid black;
+}
+
+.link-action{
+    cursor: pointer;
+}
+
+#toast{
+    width: max-content;
+    position: fixed;
+    top: 0;
+}
+
+.toast-container{
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    animation: muncul 300ms ease-in-out ;
+}
+
+.toast-gone{
+    animation: hilang 1s ease-in-out 1s;
+}
+
+@keyframes muncul{
+    from{
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hilang{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.background-box {
+    background-color: #FFCB39;
+    position: absolute;
+    top: 12rem;
+    left: 30rem;
+    right: 30rem;
+    bottom: -10rem;
+    border-radius: 5rem;
+    box-shadow: 1rem 1rem 70px rgb(120, 120, 120);
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .background-box {
+        top: 12rem; /* Ubah tinggi top pada layar yang lebih kecil */
+        left: 2rem; /* Ubah posisi left pada layar yang lebih kecil */
+        right: 2rem; /* Ubah posisi right pada layar yang lebih kecil */
+        bottom: -10rem; /* Ubah tinggi bottom pada layar yang lebih kecil */
+        border-radius: 2rem; /* Ubah radius border pada layar yang lebih kecil */
+    }
+}
+
+@media (max-width: 960px) {
+    .background-box {
+        top: 12rem; /* Ubah tinggi top pada layar yang lebih kecil */
+        left: 2rem; /* Ubah posisi left pada layar yang lebih kecil */
+        right:  2rem; /* Ubah posisi right pada layar yang lebih kecil */
+        bottom: -10rem; /* Ubah tinggi bottom pada layar yang lebih kecil */
+        border-radius: 2rem; /* Ubah radius border pada layar yang lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .background-box {
+        top: 3rem; /* Ubah tinggi top pada layar ponsel */
+        left: 0.5rem; /* Ubah posisi left pada layar ponsel */
+        right: 0.5rem; /* Ubah posisi right pada layar ponsel */
+        bottom: -2rem; /* Ubah tinggi bottom pada layar ponsel */
+        border-radius: 1rem; /* Ubah radius border pada layar ponsel */
+    }
+}
